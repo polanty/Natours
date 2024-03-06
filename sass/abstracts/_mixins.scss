@@ -1,0 +1,70 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//media query manager
+/*
+screen ranges
+0-600px  phones
+600-900px screen in potrait
+900-1200px screen in landscape
+1200-1800 is our normal screen size cause it is a deskop design first
+1800px+  very big screen
+*/
+/*
+ breakpoints
+ -phone
+ -tab-potrait
+ -tab-landscape
+ -big-desktop
+
+ ems is always the best optiom when applying to the media query
+ so 1em is 16px based on the defaukt font size of every computer
+*/
+@mixin response-phone($breakpoint) {
+  @if $breakpoint == Small-phone {
+    @media (max-width: 25.9em) {
+      // the initial 41400px divide by 16px d default browser font size
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // the initial 600px divide by 16px d default browser font size
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-potrait {
+    // the initial 900px divide by 16px d default browser font size
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    // the initial 1200px divide by 16px d default browser font size
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab__landscape-large {
+    // the initial 1800px divide by 16px d default browser font size
+    @media (min-width: 112.5rem) {
+      @content;
+    }
+  }
+}

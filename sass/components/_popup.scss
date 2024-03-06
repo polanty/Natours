@@ -1,0 +1,123 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &__content {
+    @include position;
+
+    width: 75%;
+    //height: 42.5rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s 0.2s;
+
+    @include response-phone(tab-potrait) {
+      display: block;
+    }
+  }
+
+  &__left {
+    width: 33.33333%;
+    display: table-cell;
+
+    @include response-phone(tab-potrait) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    width: 66.6667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    position: relative;
+
+    @include response-phone(tab-potrait) {
+      width: 100%;
+      display: block;
+    }
+
+    @include response-phone(tab-landscape) {
+      padding: 1.5rem 2.5rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include response-phone(tab-potrait) {
+      display: inline-block;
+      width: 49%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid $color-grey-light-2;
+    hyphens: auto;
+
+    @include response-phone(tab__landscape-large) {
+      font-size: 2rem;
+    }
+
+    @include response-phone(tab-landscape) {
+      font-size: 1.2rem;
+      column-gap: 3rem;
+    }
+
+    @include response-phone(Small-phone) {
+      column-count: auto;
+    }
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-dark-grey-3;
+      position: absolute;
+      top: 2rem;
+      right: 2.5rem;
+      font-size: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+      transform: scale(1.4);
+    }
+  }
+}
