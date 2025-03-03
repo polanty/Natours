@@ -1,9 +1,15 @@
 .header {
   height: 95vh;
+  // background-image: linear-gradient(
+  //     359.56deg,
+  //     $color-primary-second -32.94%,
+  //     $color-primary-Third 99.61%
+  //   ),
+  //   url("../img/pexels-te-lensfix-1371360.jpg");
   background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      359.56deg,
+      rgba($color-primary-light, 0.8) -32.94%,
+      rgba($color-primary-dark, 0.8) 99.61%
     ),
     url("../img/pexels-te-lensfix-1371360.jpg");
   background-size: cover;

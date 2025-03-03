@@ -8,7 +8,7 @@ body {
 }
 
 .heading-primary {
-  color: $color-white;
+  color: $color-black;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 5rem;
@@ -70,10 +70,10 @@ body {
   -webkit-text-fill-color: transparent;
   transition: all 0.2s;
 
-  &:hover {
-    transform: skewY(2deg) skewX(15deg);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-  }
+  // &:hover {
+  //   transform: skewY(2deg) skewX(15deg);
+  //   text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  // }
 
   @include response-phone(tab-landscape) {
     font-size: 3rem;

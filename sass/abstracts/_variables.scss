@@ -6,6 +6,8 @@ $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: black;
+$color-primary-second: rgba(196, 232, 180, 0.43);
+$color-primary-Third: rgba(216, 245, 204, 0);
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -25,3 +27,9 @@ $gutter-horizontal: 6rem;
 $standard-font: 1.6rem;
 
 $default-font-size: 1.6rem;
+
+// linear-gradient(
+// 		359.56deg,
+// 		rgba(196, 232, 180, 0.43) -32.94%,
+// 		rgba(216, 245, 204, 0) 99.61%
+// 	);

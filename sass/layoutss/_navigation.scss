@@ -31,10 +31,7 @@
     height: 6rem;
     width: 6rem;
     border-radius: 50%;
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background-image: radial-gradient($color-primary, $color-primary);
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
